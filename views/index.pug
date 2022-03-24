@@ -1,0 +1,11 @@
+extends layout
+
+block content
+  h1= title
+  hr
+  each message in messages
+    p= `${message.text} - ${message.user}`
+    pre= message.added
+    hr
+  button
+    a(href="/new") Send a message
